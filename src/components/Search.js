@@ -1,10 +1,11 @@
 import React from "react";
 
-function Search() {
+function Search({searchQuery, handleSearch}) {
+  
   return (
     <div className="ui search">
       <div className="ui icon input">
-        <input className="prompt" />
+        <input onChange={handleSearch} className="prompt" value={searchQuery}/>
         <i className="search icon" />
       </div>
     </div>
